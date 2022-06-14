@@ -14,13 +14,15 @@ const Articles = ({articles}) => {
     {articles.map((article) => {
         const {article_id, title, body, topic, votes, comment_count, author} = article;
         return <Box key={article_id} component="article" sx={articlesStyles.articleContainer}>
-                <Box sx={{display: "flex", justifyContent: "space-between"}}>
+                <Box sx={articlesStyles.headersContainer}>
                     <Typography>{topic} - created by: {author}</Typography>
-                    <Link href="">Read Article</Link>
+                    <Link href={`/${article_id}`}>Read Article</Link>
                 </Box>
+                <Box component="header">
                 <Typography variant="h5" component="h5" sx={articlesStyles.title}>{title}</Typography>
                 <Typography variant="p" component="p">{body.slice(0, 100)}...</Typography>
-                <Box component="section" sx={articlesStyles.containers}>
+                </Box>
+                <Box component="section" sx={{...articlesStyles.containers, ...articlesStyles.reactionsContainer}}>
                     <Box sx={{...articlesStyles.containers, ...articlesStyles.votesContainer}} component="div">
                         <ArrowUpwardIcon sx={articlesStyles.icons}/>
                         <Typography component="p">{votes}</Typography>
@@ -31,7 +33,6 @@ const Articles = ({articles}) => {
                     </Box>
                 </Box>
                 <Box>
-
                 </Box>
                </Box>
     })}
