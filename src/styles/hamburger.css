@@ -1,0 +1,29 @@
+.hamburger-container{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.hamburger-lines{
+    width: 50px;
+    height: 3px;
+    background-color: rgb(212,210,213);
+    transition: all 0.3s;
+    transform-origin: left;
+}
+
+.open-menu-top{
+    transform-origin: left;
+    transform: rotate(32deg);
+}
+
+.open-menu-middle{
+    opacity: 0;
+}
+
+.open-menu-bottom{
+    transform-origin: left;
+    transform: rotate(-32deg);
+}
