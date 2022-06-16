@@ -4,6 +4,10 @@ import {fetchArticles} from "../utils/api"
 
 import Spinner from "../components/Spinner"
 import Articles from "../components/Articles"
+import AllTopics from "./AllTopics"
+
+import {Box} from "@mui/material"
+import topicStyles from "../styles/homeAndTopic"
 
 const Topic = () => {
     const {topic_name} = useParams();
@@ -32,7 +36,10 @@ if(errorMessage){
 }
 
   return (
-    <Articles articles={articles}/>
+      <Box component="section" sx={topicStyles}>
+        <AllTopics currentTopic={topic_name}/>
+      <Articles articles={articles}/>
+    </Box>
   )
 }
 
