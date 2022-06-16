@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 
-// import { Link } from "react-router-dom";
 import Link from '@mui/material/Link';
 
 import articlesStyles from "../styles/articles"
@@ -10,7 +9,7 @@ import CommentIcon from '@mui/icons-material/Comment';
 
 const Articles = ({articles}) => {
   return (
-    <Box component="main">
+    <Box component="main" sx={articlesStyles.mainContainer}>
     {articles.map((article) => {
         const {article_id, title, body, topic, votes, comment_count, author} = article;
         return <Box key={article_id} component="article" sx={articlesStyles.articleContainer}>
@@ -31,8 +30,6 @@ const Articles = ({articles}) => {
                         <CommentIcon sx={articlesStyles.icons}/>
                         <Typography component="p">{comment_count}</Typography>
                     </Box>
-                </Box>
-                <Box>
                 </Box>
                </Box>
     })}

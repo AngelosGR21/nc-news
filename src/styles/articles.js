@@ -1,9 +1,17 @@
 const articlesStyles = {
+  mainContainer: {
+    marginTop: "5rem",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    overflowY: "scroll",
+  },
   articleContainer: {
     margin: "1rem 0",
     padding: "10px",
-    width: "98%",
     maxWidth: "800px",
+    borderRadius: "10px",
+    boxShadow: "0px 10px 8px black",
     backgroundColor: "rgb(57, 59, 60)",
   },
   headersContainer: {
@@ -13,7 +21,8 @@ const articlesStyles = {
   title: {
     fontWeight: "bolder",
     fontStyle: "italic",
-    marginBottom: "0.5rem",
+    margin: "1rem 0",
+    textAlign: "center",
   },
   reactionsContainer: {
     marginTop: "30px",
