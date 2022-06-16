@@ -4,6 +4,7 @@ const articlesStyles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    overflowY: "scroll",
   },
   articleContainer: {
     margin: "1rem 0",
