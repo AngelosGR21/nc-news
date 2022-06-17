@@ -45,3 +45,13 @@ export const fetchUsers = async () => {
     console.log(e);
   }
 };
+
+export const patchVotes = async (article_id, inc_votes) => {
+  try {
+    await origin.patch(`/articles/${article_id}`, {
+      inc_votes,
+    });
+  } catch (e) {
+    return 400;
+  }
+};

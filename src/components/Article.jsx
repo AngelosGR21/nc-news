@@ -4,7 +4,7 @@ import { Box, Typography, IconButton } from "@mui/material";
 import {GlobalStyles} from "@mui/material"
 import AllTopics from "./AllTopics";
 import Spinner from "./Spinner";
-import { fetchArticle } from "../utils/api";
+import { fetchArticle, patchVotes } from "../utils/api";
 
 
 import pageContainer from "../styles/mainContainers";
@@ -18,6 +18,7 @@ const Article = () => {
     const [article, setArticle] = useState([]);
     const [isError, setIsError] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [upvoted, setUpvoted] = useState(0);
 
     useEffect(() => {
         fetchArticle(article_id).then((res) => {
@@ -30,6 +31,24 @@ const Article = () => {
             }
         })
     },[])
+
+    const handleUpvote = (id) => {
+        if(upvoted === 1){
+            setUpvoted((currVotes) => currVotes - 1);
+            patchVotes(id, -1).then((res) => {
+                if(res === 500){
+                    setUpvoted(1);
+                }
+            })
+        }else{
+            setUpvoted((currVotes) => currVotes + 1);
+            patchVotes(id, 1).then((res) => {
+                if(res === 500){
+                    setUpvoted(0);
+                }
+            })
+        }
+    }
 
     if(isLoading){
         return (
@@ -61,9 +80,9 @@ const Article = () => {
                 <Typography component="p" sx={articleStyles.credits}>Posted by - {article.author}</Typography>
             </Box>
             <Box component="section">
-                <IconButton color="primary">
+                <IconButton color={upvoted ? "error" : "primary"} onClick={() => handleUpvote(article.article_id)}>
                     <ArrowUpwardIcon/>
-                    <Typography>{article.votes}</Typography>
+                    <Typography>{article.votes + upvoted}</Typography>
                 </IconButton>
                 <IconButton color="primary">
                     <CommentIcon/>
