@@ -23,6 +23,14 @@ const navbarStyles = {
   homeLink: {
     color: colors.white,
   },
+  navbarAvatar: {
+    width: "40px",
+    height: "40px",
+    borderRadius: "50%",
+    objectFit: "cover",
+    objectPosition: "top",
+    marginRight: "10px",
+  },
 };
 
 export default navbarStyles;
