@@ -7,7 +7,7 @@ import AllTopics from "./AllTopics"
 import {Box} from "@mui/material";
 import { fetchArticles } from "../utils/api";
 
-import homeStyles from "../styles/homeAndTopic.js"
+import homeStyles from "../styles/mainContainers.js"
 
 const Home = () => { 
     const [articles, setArticles] = useState([]);
