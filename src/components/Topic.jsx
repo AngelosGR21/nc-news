@@ -7,7 +7,7 @@ import Articles from "../components/Articles"
 import AllTopics from "./AllTopics"
 
 import {Box} from "@mui/material"
-import topicStyles from "../styles/homeAndTopic"
+import topicStyles from "../styles/mainContainers"
 
 const Topic = () => {
     const {topic_name} = useParams();
