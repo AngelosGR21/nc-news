@@ -1,4 +1,4 @@
-const homeAndTopicStyles = {
+const mainContainers = {
   display: "grid",
   gridTemplateColumns: {
     md: "1fr 3fr",
@@ -8,4 +8,4 @@ const homeAndTopicStyles = {
   height: "100vh",
 };
 
-export default homeAndTopicStyles;
+export default mainContainers;

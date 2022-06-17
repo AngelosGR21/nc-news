@@ -12,10 +12,11 @@ const Articles = ({articles}) => {
     <Box component="main" sx={articlesStyles.mainContainer}>
     {articles.map((article) => {
         const {article_id, title, body, topic, votes, comment_count, author} = article;
+
         return <Box key={article_id} component="article" sx={articlesStyles.articleContainer}>
                 <Box sx={articlesStyles.headersContainer}>
                     <Typography>{topic} - created by: {author}</Typography>
-                    <Link href={`/${article_id}`}>Read Article</Link>
+                    <Link href={`/${topic}/${article_id}`}>Read Article</Link>
                 </Box>
                 <Box component="header">
                 <Typography variant="h5" component="h5" sx={articlesStyles.title}>{title}</Typography>
