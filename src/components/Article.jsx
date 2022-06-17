@@ -49,9 +49,10 @@ const Article = () => {
           )
     }
 
+
   return (
     <Box sx={pageContainer} component="section">
-    <GlobalStyles styles={{body: {overflow: "visible"}}}/>
+        <GlobalStyles styles={{body: {overflow: "visible"}}}/>
         <AllTopics/>
         <Box sx={articleStyles.articleContainer} component="article">
             <Box sx={articleStyles.articleInfo}>
