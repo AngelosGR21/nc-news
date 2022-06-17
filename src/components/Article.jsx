@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { Box, Typography, IconButton } from "@mui/material";
+import {GlobalStyles} from "@mui/material"
 import AllTopics from "./AllTopics";
 import Spinner from "./Spinner";
 import { fetchArticle } from "../utils/api";
@@ -50,22 +51,25 @@ const Article = () => {
 
   return (
     <Box sx={pageContainer} component="section">
+    <GlobalStyles styles={{body: {overflow: "visible"}}}/>
         <AllTopics/>
         <Box sx={articleStyles.articleContainer} component="article">
             <Box sx={articleStyles.articleInfo}>
-                <Typography component="h1" mb={3}>{article.title} by {article.author}</Typography>
-                <Typography component="p">{article.body}</Typography>
+                <Typography variant="h4" component="h1" mb={3} sx={articleStyles.title}>{article.title} </Typography>
+                <Typography component="p" sx={articleStyles.body}>{article.body}</Typography>
+                <Typography component="p" sx={articleStyles.credits}>Posted by - {article.author}</Typography>
             </Box>
             <Box component="section">
-                <IconButton>
+                <IconButton color="primary">
                     <ArrowUpwardIcon/>
+                    <Typography>{article.votes}</Typography>
                 </IconButton>
-                <IconButton>
+                <IconButton color="primary">
                     <CommentIcon/>
+                    <Typography>{article.comment_count}</Typography>
                 </IconButton>
             </Box>
             <Box component="section">
-
             </Box>
         </Box>
     </Box>
