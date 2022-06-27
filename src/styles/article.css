@@ -1,0 +1,18 @@
+.article-article-container {
+    margin: 7rem auto;
+    padding: 20px;
+}
+
+.article-title {
+    text-align: center;
+    font-weight: bold !important;
+}
+
+.article-body {
+    line-height: 1.8rem !important;
+}
+
+.article-credits {
+    margin: 1.5rem 0 !important;
+    font-style: italic;
+}
