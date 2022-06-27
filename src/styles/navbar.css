@@ -1,0 +1,38 @@
+@import "./colors.css";
+
+.MuiToolbar-root {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.avatar-link-container {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    font-size: 20px;
+    color: var(--white) !important;
+    margin-right: 10px !important;
+    text-decoration-color: var(--white) !important;
+}
+
+.navbar-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    margin-right: 10px;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    text-decoration-color: var(--white) !important;
+}
+
+.home-link {
+    color: var(--white);
+}
