@@ -1,0 +1,51 @@
+.dropdownTopics-menu {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(5% at 5% 0%);
+    transition: clip-path 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.dropdownTopics-expanded {
+    clip-path: circle(200% at 5% 0%);
+}
+
+.dropdownTopics-link {
+    margin-top: 8rem !important;
+    color: var(--red) !important;
+    text-decoration-color: var(--red) !important;
+}
+
+.dropdownTopics-topics-container {
+    display: flex;
+}
+
+.dropdownTopics-arrow-down {
+    color: var(--white);
+    transition: all 1s;
+}
+
+.dropdownTopics-arrow-reversed {
+    transform: rotate(-180deg);
+}
+
+.dropdownTopics-all-topics-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 20%;
+}
+
+.dropdownTopics-topic-links {
+    color: var(--red) !important;
+    text-decoration-color: var(--red) !important;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
