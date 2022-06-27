@@ -1,0 +1,23 @@
+@import "./colors.css";
+
+.allTopics-container {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.current-topic {
+    margin-top: 3rem !important;
+    font-size: 1.5rem !important;
+    text-transform: capitalize;
+}
+
+.sidebar-link {
+    color: var(--red) !important;
+    font-size: 1.5rem;
+    margin-top: 3rem !important;
+    text-transform: capitalize;
+    text-decoration-color: var(--red) !important;
+}
