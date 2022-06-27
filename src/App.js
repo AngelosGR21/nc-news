@@ -8,8 +8,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Article from "./components/Article";
 import Login from "./components/Login";
 
-import { ThemeProvider } from "@mui/private-theming";
-import theme from "./styles/customTheme";
 
 function App() {
   const [username, setUsername] = useState(null);
@@ -25,7 +23,6 @@ function App() {
       <UserContext.Provider
         value={{ username, avatar, setUsername, setAvatar }}
       >
-        <ThemeProvider theme={theme}>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -38,7 +35,6 @@ function App() {
               }
             />
           </Routes>
-        </ThemeProvider>
       </UserContext.Provider>
     </>
   );
