@@ -1,0 +1,28 @@
+body {
+    overflow: visible;
+}
+
+.login-main-container {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-user-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.login-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.login-button {
+    border: 2px solid var(--red) !important;
+    border-radius: 5px;
+    margin-top: 10px !important;
+}
