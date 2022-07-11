@@ -55,3 +55,32 @@ export const patchVotes = async (article_id, inc_votes) => {
     return 400;
   }
 };
+
+export const fetchComments = async (article_id) => {
+  try{
+    const comments = await origin.get(`/articles/${article_id}/comments`)
+    return comments.data.comments;
+  }catch(e){
+    return 400;
+  }
+}
+
+
+export const patchCommentVotes = async (comment_id, inc_votes) => {
+  try{
+    await origin.patch(`/comments/${comment_id}`, {
+      inc_votes
+    })
+  }catch(e){
+    return 500;
+  }
+}
+
+export const postComment = async (article_id, body, username) => {
+  try{
+    const createdComment = await origin.post(`/articles/${article_id}/comments`, {body, username})
+    return createdComment.data.comment
+  }catch(e){
+    console.log(e);
+  }
+}
