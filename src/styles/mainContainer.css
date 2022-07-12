@@ -1,12 +1,18 @@
+body {
+    overflow: hidden !important;
+}
+
+.single-article-container,
 .global-exported-container {
     display: grid;
-    overflow: hidden;
     width: 100vw;
     height: 100vh;
 }
 
 
 @media (min-width: 800px) {
+
+    .single-article-container,
     .global-exported-container {
         grid-template-columns: 1fr 3fr;
     }
