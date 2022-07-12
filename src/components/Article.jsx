@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Box, Typography, IconButton } from "@mui/material";
-import { GlobalStyles } from "@mui/material"
+import Comments from "./Comments";
 import AllTopics from "./AllTopics";
 import Spinner from "./Spinner";
 import { fetchArticle, patchVotes } from "../utils/api";
@@ -70,8 +70,7 @@ const Article = () => {
 
 
     return (
-        <Box className="global-exported-container" component="section">
-            <GlobalStyles styles={{ body: { overflow: "visible" } }} />
+        <Box className="single-article-container" component="section">
             <AllTopics />
             <Box className="article-article-container" component="article">
                 <Box>
@@ -89,8 +88,7 @@ const Article = () => {
                         <Typography>{article.comment_count}</Typography>
                     </IconButton>
                 </Box>
-                <Box component="section">
-                </Box>
+                <Comments article_id={article_id} />
             </Box>
         </Box>
     )
