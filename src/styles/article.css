@@ -1,6 +1,8 @@
 .article-article-container {
-    margin: 7rem auto;
+    margin: 7rem auto 0 auto;
     padding: 20px;
+    overflow-y: scroll !important;
+    height: auto;
 }
 
 .article-title {
