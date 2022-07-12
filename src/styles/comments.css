@@ -1,0 +1,71 @@
+.write-comment-container,
+.comment-container {
+    margin: 2rem 0 !important;
+    padding: 20px;
+    max-width: 660px;
+    background-color: rgb(57, 59, 60);
+    border-radius: 5px;
+}
+
+.write-comment-container {
+    display: flex;
+    align-items: center;
+}
+
+.MuiOutlinedInput-input {
+    color: white !important;
+
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: #1976d2 !important;
+}
+
+.write-comment-avatar,
+.comment-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.write-comment-avatar {
+    margin-bottom: 0px;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-author-container {
+    display: flex;
+}
+
+.comment-author {
+    font-weight: bolder !important;
+    font-style: italic;
+    margin-right: 5rem;
+}
+
+.upvote-container {
+    padding-top: 0px !important;
+    align-self: flex-start !important;
+    margin-left: auto !important;
+}
+
+.upvote-container svg {
+    padding-top: 0px !important;
+}
+
+
+.post-button {
+    margin-left: 10px !important;
+}
+
+.elapsed-time {
+    font-style: italic;
+}
