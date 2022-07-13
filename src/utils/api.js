@@ -44,7 +44,7 @@ export const fetchUsers = async () => {
     const response = await origin.get("/users");
     return response.data.users;
   } catch (e) {
-    console.log(e);
+    return 500
   }
 };
 
@@ -84,5 +84,13 @@ export const postComment = async (article_id, body, username) => {
     return createdComment.data.comment
   }catch(e){
     console.log(e);
+  }
+}
+
+export const deleteComment = async (comment_id) => {
+  try{
+    await origin.delete(`/comments/${comment_id}`)
+  }catch(e){
+    if(e.response.status === 404) return 404;
   }
 }
