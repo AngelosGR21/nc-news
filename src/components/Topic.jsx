@@ -38,7 +38,7 @@ const Topic = () => {
     return (
         <Box component="section" className="global-exported-container">
             <AllTopics currentTopic={topic_name} />
-            <Articles articles={articles} />
+            <Articles articles={articles} currentTopic={topic_name} setIsLoading={setIsLoading} setArticles={setArticles} />
         </Box>
     )
 }
