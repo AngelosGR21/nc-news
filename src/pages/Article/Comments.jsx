@@ -41,7 +41,7 @@ const Comments = ({ article_id }) => {
         <Box component="section">
             {isLoggedIn && <Box className="write-comment-container" component="form" onSubmit={handleSubmit}>
                 <img src={isLoggedIn} alt="your avatar" className="write-comment-avatar" />
-                <TextField required className="comment-text-field" placeholder="Write a comment..." onChange={(e) => setCommentBody(e.target.value)} value={commentBody} />
+                <TextField multiline required className="comment-text-field" placeholder="Write a comment..." onChange={(e) => setCommentBody(e.target.value)} value={commentBody} />
                 <Button variant="contained" className="post-button" type="submit">Post</Button>
             </Box>}
 

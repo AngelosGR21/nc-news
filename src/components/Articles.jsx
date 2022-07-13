@@ -22,7 +22,7 @@ const Articles = ({ articles, currentTopic, setIsLoading, setArticles }) => {
                     </Box>
                     <Box component="header">
                         <Typography variant="h5" component="h5" className="articles-title">{title}</Typography>
-                        <Typography variant="p" component="p">{body.slice(0, 100)}...</Typography>
+                        <Typography variant="p" component="p">{body.slice(0, 200)}...</Typography>
                     </Box>
                     <Box component="section" className="articles-containers articles-reactions-container">
                         <Box className="articles-containers articles-votes-container" component="div">

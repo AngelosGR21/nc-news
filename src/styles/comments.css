@@ -2,9 +2,11 @@
 .comment-container {
     margin: 2rem 0 !important;
     padding: 20px;
-    max-width: 660px;
+    max-width: 90%;
     background-color: rgb(57, 59, 60);
     border-radius: 5px;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .deleted-comment {
@@ -70,6 +72,9 @@
     padding-top: 0px !important;
 }
 
+.comment-text-field {
+    width: 100%;
+}
 
 .post-button {
     margin-left: 10px !important;
