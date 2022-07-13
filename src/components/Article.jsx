@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Box, Typography, IconButton } from "@mui/material";
+import NotFound from "./NotFound";
 import Comments from "./Comments";
 import AllTopics from "./AllTopics";
 import Spinner from "./Spinner";
@@ -22,7 +23,7 @@ const Article = () => {
 
     useEffect(() => {
         fetchArticle(article_id).then((res) => {
-            if (res === 404) {
+            if (res === 404 || res === 400) {
                 setIsError("Article was not found");
                 setIsLoading(false);
             } else {
@@ -61,10 +62,7 @@ const Article = () => {
 
     if (isError) {
         return (
-            <Box className="global-exported-container">
-                <AllTopics />
-                <Typography variant="h3">{isError}</Typography>
-            </Box>
+            <NotFound message={isError} />
         )
     }
 
