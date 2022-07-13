@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Box, Typography, IconButton } from "@mui/material";
-import NotFound from "./NotFound";
+import NotFound from "../ErrorPage/ErrorPage";
 import Comments from "./Comments";
-import AllTopics from "./AllTopics";
-import Spinner from "./Spinner";
-import { fetchArticle, patchVotes } from "../utils/api";
+import AllTopics from "../../components/AllTopics";
+import Spinner from "../../components/Spinner";
+import { fetchArticle, patchVotes } from "../../utils/api";
 
 
-import "../styles/mainContainer.css"
-import "../styles/article.css"
+import "../../styles/mainContainer.css"
+import "../../styles/article.css"
 
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import CommentIcon from '@mui/icons-material/Comment';

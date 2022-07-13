@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
-import { fetchArticles } from "../utils/api"
+import { fetchArticles } from "../../utils/api"
 
-import Spinner from "../components/Spinner"
-import Articles from "../components/Articles"
-import AllTopics from "./AllTopics"
-import NotFound from "./NotFound"
+import Spinner from "../../components/Spinner"
+import Articles from "../../components/Articles"
+import AllTopics from "../../components/AllTopics"
+import NotFound from "../ErrorPage/ErrorPage"
 
 import { Box } from "@mui/material"
-import "../styles/mainContainer.css";
+import "../../styles/mainContainer.css";
 
 const Topic = () => {
     const { topic_name } = useParams();

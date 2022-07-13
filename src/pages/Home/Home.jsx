@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react"
-
-import Spinner from "./Spinner";
-import Articles from "./Articles"
-import AllTopics from "./AllTopics"
+import Spinner from "../../components/Spinner";
+import Articles from "../../components/Articles"
+import AllTopics from "../../components/AllTopics"
 
 import { Box } from "@mui/material";
-import { fetchArticles } from "../utils/api";
+import { fetchArticles } from "../../utils/api";
 
-import "../styles/mainContainer.css";
+import "../../styles/mainContainer.css";
 
 const Home = () => {
   const [articles, setArticles] = useState([]);

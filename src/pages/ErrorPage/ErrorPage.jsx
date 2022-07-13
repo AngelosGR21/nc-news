@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Box, Typography } from '@mui/material'
 
-import "../styles/notFound.css"
+import "../../styles/errorPage.css"
 
-const NotFound = ({ message }) => {
+const ErrorPage = ({ message }) => {
     return (
         <Box className="not-found-container">
             <Typography variant="h4" className="not-found-header">{message ? message : "404 Page not found"}</Typography>
@@ -13,4 +13,4 @@ const NotFound = ({ message }) => {
     )
 }
 
-export default NotFound
+export default ErrorPage

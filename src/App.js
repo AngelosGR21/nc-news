@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import UserContext from "./utils/UserContext";
 
-import Home from "./components/Home";
-import Topic from "./components/Topic";
+import Home from "./pages/Home/Home";
+import Topic from "./pages/Topic/Topic";
 import Navbar from "./components/Navbar/Navbar";
-import Article from "./components/Article";
-import Login from "./components/Login";
-import NotFound from "./components/NotFound";
+import Article from "./pages/Article/Article";
+import Login from "./pages/Login/Login";
+import NotFound from "./pages/ErrorPage/ErrorPage";
 
 
 function App() {

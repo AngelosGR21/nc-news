@@ -1,12 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { fetchUsers } from "../utils/api";
+import { fetchUsers } from "../../utils/api";
 import { Box, Button, Typography } from "@mui/material"
-import UserContext from "../utils/UserContext";
+import UserContext from "../../utils/UserContext";
 
-import Spinner from "./Spinner";
+import Spinner from "../../components/Spinner";
 
-import "../styles/login.css";
+import "../../styles/login.css";
 
 const Login = () => {
     const { setAvatar, setUsername } = useContext(UserContext);

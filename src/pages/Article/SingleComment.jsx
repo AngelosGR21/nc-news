@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Box, IconButton, Typography } from "@mui/material";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import { patchCommentVotes, deleteComment } from "../utils/api";
+import { patchCommentVotes, deleteComment } from "../../utils/api";
 
 const SingleComment = ({ comment }) => {
     const { comment_id, created_at, author, avatar_url, votes, body } = comment;

@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { fetchComments, postComment } from "../utils/api";
+import { fetchComments, postComment } from "../../utils/api";
 import { Box, TextField, Button } from "@mui/material";
 import SingleComment from "./SingleComment";
 
-import Spinner from "./Spinner";
+import Spinner from "../../components/Spinner";
 
-import "../styles/comments.css";
+import "../../styles/comments.css";
 
 const Comments = ({ article_id }) => {
     const [comments, setComments] = useState([]);
