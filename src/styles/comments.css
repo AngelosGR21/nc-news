@@ -7,6 +7,10 @@
     border-radius: 5px;
 }
 
+.deleted-comment {
+    display: none;
+}
+
 .write-comment-container {
     display: flex;
     align-items: center;
@@ -51,10 +55,15 @@
     margin-right: 5rem;
 }
 
+.delete-container,
 .upvote-container {
     padding-top: 0px !important;
     align-self: flex-start !important;
     margin-left: auto !important;
+}
+
+.combined-container {
+    margin-left: 0 !important;
 }
 
 .upvote-container svg {
