@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <Box className="global-exported-container" component="section">
       <AllTopics />
-      <Articles articles={articles} />
+      <Articles articles={articles} setIsLoading={setIsLoading} setArticles={setArticles} />
     </Box>
   )
 }

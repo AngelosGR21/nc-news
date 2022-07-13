@@ -1,3 +1,4 @@
+import SortBy from "./SortBy";
 import { Box, Typography } from "@mui/material";
 
 import Link from '@mui/material/Link';
@@ -7,9 +8,10 @@ import "../styles/articles.css";
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import CommentIcon from '@mui/icons-material/Comment';
 
-const Articles = ({ articles }) => {
+const Articles = ({ articles, currentTopic, setIsLoading, setArticles }) => {
     return (
         <Box component="main" className="articles-main-container">
+            <SortBy currentTopic={currentTopic} setIsLoading={setIsLoading} setArticles={setArticles} />
             {articles.map((article) => {
                 const { article_id, title, body, topic, votes, comment_count, author } = article;
 

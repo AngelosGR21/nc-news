@@ -4,12 +4,14 @@ const origin = axios.create({
   baseURL: "https://nc-news-project-nc.herokuapp.com/api",
 });
 
-export const fetchArticles = async (topic) => {
+export const fetchArticles = async (topic, sort_by, order) => {
   try {
     let endpoint = "/articles";
     const response = await origin.get(endpoint, {
       params: {
-        topic,
+        ...(topic && {topic}),
+        ...(sort_by && {sort_by}),
+        ...(order && {order}),
       },
     });
     return response.data.articles;
