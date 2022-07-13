@@ -5,6 +5,7 @@ import { fetchArticles } from "../utils/api"
 import Spinner from "../components/Spinner"
 import Articles from "../components/Articles"
 import AllTopics from "./AllTopics"
+import NotFound from "./NotFound"
 
 import { Box } from "@mui/material"
 import "../styles/mainContainer.css";
@@ -32,7 +33,7 @@ const Topic = () => {
     }
 
     if (errorMessage) {
-        return <h1>{errorMessage}</h1>
+        return <NotFound message={errorMessage} />
     }
 
     return (

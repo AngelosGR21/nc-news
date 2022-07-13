@@ -25,7 +25,7 @@ export const fetchTopics = async () => {
     const response = await origin.get("/topics");
     return response.data.topics;
   } catch (e) {
-    console.log(e);
+    return e.response.status
   }
 };
 
@@ -34,8 +34,7 @@ export const fetchArticle = async (id) => {
     const response = await origin.get(`/articles/${id}`);
     return response.data.article;
   } catch (e) {
-    console.log(e);
-    if (e.response.status === 404) return 404;
+    return e.response.status 
   }
 };
 
@@ -83,7 +82,7 @@ export const postComment = async (article_id, body, username) => {
     const createdComment = await origin.post(`/articles/${article_id}/comments`, {body, username})
     return createdComment.data.comment
   }catch(e){
-    console.log(e);
+    return e.response.status
   }
 }
 

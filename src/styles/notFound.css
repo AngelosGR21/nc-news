@@ -1,0 +1,13 @@
+.not-found-container {
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.not-found-header {
+    margin-bottom: 3rem !important;
+}
+
+.not-found-link {
+    font-size: 25px;
+    color: red;
+}

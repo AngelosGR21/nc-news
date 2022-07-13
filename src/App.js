@@ -7,6 +7,7 @@ import Topic from "./components/Topic";
 import Navbar from "./components/Navbar/Navbar";
 import Article from "./components/Article";
 import Login from "./components/Login";
+import NotFound from "./components/NotFound";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
                 username && avatar ? <Navigate to="/" replace /> : <Login />
               }
             />
+            <Route path="*" element={<NotFound/>}/>
           </Routes>
       </UserContext.Provider>
     </>
