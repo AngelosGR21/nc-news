@@ -89,6 +89,7 @@ export const postComment = async (article_id, body, username) => {
 export const deleteComment = async (comment_id) => {
   try{
     await origin.delete(`/comments/${comment_id}`)
+    return 200;
   }catch(e){
     if(e.response.status === 404) return 404;
   }
