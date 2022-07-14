@@ -5,6 +5,7 @@ import NotFound from "../ErrorPage/ErrorPage";
 import Comments from "./Comments";
 import AllTopics from "../../components/AllTopics";
 import Spinner from "../../components/Spinner";
+import Snackbar from "../../components/Snackbar"
 import { fetchArticle, patchVotes } from "../../utils/api";
 
 
@@ -20,6 +21,10 @@ const Article = () => {
     const [isError, setIsError] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [upvoted, setUpvoted] = useState(0);
+    //feedback states
+    const [open, setOpen] = useState(false);
+    const [feedbackMessage, setFeedbackMessage] = useState("");
+    const [severity, setSeverity] = useState("success");
 
     useEffect(() => {
         fetchArticle(article_id).then((res) => {
@@ -34,19 +39,32 @@ const Article = () => {
     }, [])
 
     const handleUpvote = (id) => {
+        setSeverity("success");
         if (upvoted === 1) {
             setUpvoted((currVotes) => currVotes - 1);
             patchVotes(id, -1).then((res) => {
                 if (res === 500) {
                     setUpvoted(1);
+                    setSeverity("error");
+                    setFeedbackMessage("Something went wrong")
+                } else {
+                    setSeverity("info")
+                    setFeedbackMessage("Upvote has been removed")
                 }
+                setOpen(true);
             })
         } else {
             setUpvoted((currVotes) => currVotes + 1);
             patchVotes(id, 1).then((res) => {
                 if (res === 500) {
                     setUpvoted(0);
+                    setSeverity("error");
+                    setFeedbackMessage("Something went wrong");
+                } else {
+                    setFeedbackMessage("Article has been upvoted")
                 }
+
+                setOpen(true);
             })
         }
     }
@@ -88,6 +106,7 @@ const Article = () => {
                 </Box>
                 <Comments article_id={article_id} />
             </Box>
+            <Snackbar message={feedbackMessage} open={open} setOpen={setOpen} severity={severity} />
         </Box>
     )
 }
