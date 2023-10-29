@@ -1,6 +1,6 @@
 # Northcoders News Frontend
 
-## **Live Link : https://northcoders-news-project.netlify.app/**
+## **Live Link : [https://news-northcoders.netlify.app/](https://news-northcoders.netlify.app/)**
 ---
 
 ## **Summary**
